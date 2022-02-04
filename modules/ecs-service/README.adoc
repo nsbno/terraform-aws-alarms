@@ -1,0 +1,25 @@
+= ECS Service Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor for excessive usage in an ECS service
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "ecs_service_alarms" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/ecs-service?ref=x.y.z"
+
+  name_prefix = "my-application"
+  ecs_cluster_name = data.aws_ecs_cluster.this.name
+  ecs_service_name = data.aws_ecs_service.this.name
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
+}
+----
