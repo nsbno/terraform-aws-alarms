@@ -1,0 +1,16 @@
+= Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Various modules to make CloudWatch Alarms easier to configure
+
+toc::[]
+
+== About
+
+This is a collection of modules to help you set up CloudWatch Alarms!
+
+== Available Modules
+
+These are the available modules in this repository.
