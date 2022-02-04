@@ -1,0 +1,24 @@
+= API Gateway Monitoring
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor for discrepancies in an API Gateway API
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "api_gateway_alarms" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/api-gateway?ref=x.y.z"
+
+  name_prefix = "my-application"
+  api_name = "cat-api"
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
+}
+----

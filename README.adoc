@@ -11,6 +11,11 @@ toc::[]
 
 This is a collection of modules to help you set up CloudWatch Alarms!
 
+The focus for this module is sensible defaults, and a low amount of configuration.
+
 == Available Modules
 
 These are the available modules in this repository.
+
+link:./modules/api-gateway/[API Gateway]::
+Monitor for discrepancies in your API Gateway hosted APIs.
