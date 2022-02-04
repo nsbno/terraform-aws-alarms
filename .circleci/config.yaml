@@ -10,6 +10,7 @@ terraform_versions: &terraform_versions
 terraform_folders: &terraform_folders
   - ./modules/api-gateway
   - ./modules/ecs-service
+  - ./modules/alb
 
 workflows:
   validate:

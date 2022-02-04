@@ -1,0 +1,25 @@
+= Application Load Balancer Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Check for unhealthy application load balancers
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "alb_alarms" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/alb?ref=x.y.z"
+
+  name_prefix = "my-application"
+  target_group_arn_suffix = "target-group/1234"
+  load_balancer_arn_suffix = "loadbalancer/1234"
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.critical.arn]
+}
+----
