@@ -24,7 +24,7 @@ resource "aws_cloudwatch_metric_alarm" "high_latency" {
   threshold           = var.latency_threshold
   period              = 60
   evaluation_periods  = var.latency_times_failed
-  treat_missing_data  = "notBreaching"
+  treat_missing_data  = "ignore"
 
   alarm_actions = var.alarm_sns_topic_arns
   ok_actions    = var.alarm_sns_topic_arns
@@ -45,7 +45,7 @@ resource "aws_cloudwatch_metric_alarm" "num_errors_service" {
   threshold           = var.error_5xx_threshold
   period              = 60
   evaluation_periods  = var.error_5xx_times_failed
-  treat_missing_data  = "notBreaching"
+  treat_missing_data  = "ignore"
 
   alarm_actions = var.alarm_sns_topic_arns
   ok_actions    = var.alarm_sns_topic_arns
