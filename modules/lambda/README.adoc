@@ -1,0 +1,24 @@
+= Lambda Service Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor for execution errors in a Lambda function
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "lambda_error_alarm" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/lambda?ref=x.y.z"
+
+  name_prefix      = "my-application"
+  lambda_name      = data.aws_lambda_function.this.function_name
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.lambda_error.arn]
+}
+----

@@ -20,8 +20,11 @@ These are the available modules in this repository.
 link:./modules/api-gateway/[API Gateway]::
 Monitor for discrepancies in your API Gateway hosted APIs.
 
+link:./modules/lambda/[Lambda]::
+Alarm for execution errors in your Lambda.
+
 link:./modules/ecs-service/[ECS Service]::
 Check for high CPU or memory usage in your services.
 
 link:./modules/alb/[Application Load Balancer]::
-See if something is wrong with services behind an ALB
+See if something is wrong with services behind an ALB.
