@@ -15,7 +15,8 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu_utilization" {
 
   metric_name = "CPUUtilization"
   namespace   = "AWS/ECS"
-  dimensions  = {
+
+  dimensions = {
     ClusterName = var.ecs_cluster_name
     ServiceName = var.ecs_service_name
   }
@@ -36,7 +37,8 @@ resource "aws_cloudwatch_metric_alarm" "high_memory_utilization" {
 
   metric_name = "MemoryUtilization"
   namespace   = "AWS/ECS"
-  dimensions  = {
+
+  dimensions = {
     ClusterName = var.ecs_cluster_name
     ServiceName = var.ecs_service_name
   }

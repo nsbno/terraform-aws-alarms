@@ -15,8 +15,9 @@ resource "aws_cloudwatch_metric_alarm" "high_latency" {
 
   metric_name = "IntegrationLatency"
   namespace   = "AWS/ApiGateway"
-  dimensions  = {
-    ApiName = "${var.api_name}"
+
+  dimensions = {
+    ApiName = var.api_name
   }
 
   statistic           = "Average"
@@ -36,8 +37,9 @@ resource "aws_cloudwatch_metric_alarm" "num_errors_service" {
 
   metric_name = "5XXError"
   namespace   = "AWS/ApiGateway"
-  dimensions  = {
-    ApiName = "${var.api_name}"
+
+  dimensions = {
+    ApiName = var.api_name
   }
 
   statistic           = "Average"

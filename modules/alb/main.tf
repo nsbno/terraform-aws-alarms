@@ -15,7 +15,8 @@ resource "aws_cloudwatch_metric_alarm" "service_health" {
 
   metric_name = "HealthyHostCount"
   namespace   = "AWS/ApplicationELB"
-  dimensions  = {
+
+  dimensions = {
     TargetGroup  = var.target_group_arn_suffix
     LoadBalancer = var.load_balancer_arn_suffix
   }
