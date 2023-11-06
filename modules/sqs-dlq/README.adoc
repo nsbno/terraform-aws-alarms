@@ -1,0 +1,23 @@
+= Lambda Service Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor whenever messages appear in your DLQ
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "dlq_alarm" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/sqs-dlq?ref=x.y.z"
+
+  dlq_queue_name = "derailed-trains-dlq"
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.lambda_error.arn]
+}
+----

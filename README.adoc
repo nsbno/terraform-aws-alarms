@@ -28,3 +28,6 @@ Check for high CPU or memory usage in your services.
 
 link:./modules/alb/[Application Load Balancer]::
 See if something is wrong with services behind an ALB.
+
+link:./modules/sqs-dlq/[SQS DLQ]::
+Know when your SQS messages are ending up in a DLQ.

@@ -12,6 +12,7 @@ terraform_folders: &terraform_folders
   - ./modules/ecs-service
   - ./modules/alb
   - ./modules/lambda
+  - ./modules/sqs-dlq
 
 workflows:
   validate:
