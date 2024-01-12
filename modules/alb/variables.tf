@@ -1,5 +1,5 @@
-variable "name_prefix" {
-  description = "Prefix to apply to the alarm names"
+variable "application_name" {
+  description = "Name of the ECS service. Name is prefixed in the alarm names"
   type        = string
 }
 

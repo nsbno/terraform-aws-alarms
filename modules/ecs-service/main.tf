@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "high_cpu_utilization" {
-  alarm_name        = "${var.name_prefix}-${var.ecs_service_name}-cpu"
+  alarm_name        = "${var.ecs_service_name}-cpu"
   alarm_description = "${var.ecs_service_name} has crossed the CPU usage treshold"
 
   metric_name = "CPUUtilization"
@@ -32,7 +32,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu_utilization" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "high_memory_utilization" {
-  alarm_name        = "${var.name_prefix}-${var.ecs_service_name}-memory"
+  alarm_name        = "${var.ecs_service_name}-memory"
   alarm_description = "${var.ecs_service_name} has crossed the memory usage treshold"
 
   metric_name = "MemoryUtilization"

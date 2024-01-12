@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "high_latency" {
-  alarm_name        = "${var.name_prefix}-${var.api_name}-latency"
+  alarm_name        = "${var.api_name}-latency"
   alarm_description = "${var.api_name} latency is above configured treshold"
 
   metric_name = "IntegrationLatency"
@@ -32,7 +32,7 @@ resource "aws_cloudwatch_metric_alarm" "high_latency" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "num_errors_service" {
-  alarm_name        = "${var.name_prefix}-${var.api_name}-5xx-errors"
+  alarm_name        = "${var.api_name}-5xx-errors"
   alarm_description = "${var.api_name} has crossed the 5xx error treshold"
 
   metric_name = "5XXError"

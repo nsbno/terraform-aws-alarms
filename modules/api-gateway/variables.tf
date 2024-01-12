@@ -1,8 +1,3 @@
-variable "name_prefix" {
-  description = "Prefix to apply to the alarm names"
-  type        = string
-}
-
 variable "api_name" {
   description = "The name of the API in API Gateway"
   type        = string
