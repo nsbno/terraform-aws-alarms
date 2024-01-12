@@ -1,8 +1,3 @@
-variable "name_prefix" {
-  description = "Prefix to apply to the alarm names"
-  type        = string
-}
-
 variable "ecs_cluster_name" {
   description = "The name of the ECS Cluster"
   type        = string

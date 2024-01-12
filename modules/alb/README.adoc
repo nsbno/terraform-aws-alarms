@@ -16,7 +16,7 @@ Place this module in your application repository
 module "alb_alarms" {
   source = "github.com/nsbno/terraform-aws-alarms//modules/alb?ref=x.y.z"
 
-  name_prefix = "my-application"
+  application_name = "my-application"
   target_group_arn_suffix = "target-group/1234"
   load_balancer_arn_suffix = "loadbalancer/1234"
 

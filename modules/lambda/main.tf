@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "lambda_errors" {
-  alarm_name        = "${var.name_prefix}-${var.lambda_name}-error"
+  alarm_name        = "${var.lambda_name}-error"
   alarm_description = "${var.lambda_name} has had errors above configured threshold"
 
   metric_name = "Errors"

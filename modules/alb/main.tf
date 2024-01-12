@@ -10,8 +10,8 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "service_health" {
-  alarm_name        = "${var.name_prefix}-unhealthy"
-  alarm_description = "${var.name_prefix} has ${var.healthy_host_threshold} or less healthy hosts"
+  alarm_name        = "${var.application_name}-unhealthy"
+  alarm_description = "${var.application_name} has ${var.healthy_host_threshold} or less healthy hosts"
 
   metric_name = "HealthyHostCount"
   namespace   = "AWS/ApplicationELB"

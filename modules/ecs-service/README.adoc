@@ -16,7 +16,6 @@ Place this module in your application repository
 module "ecs_service_alarms" {
   source = "github.com/nsbno/terraform-aws-alarms//modules/ecs-service?ref=x.y.z"
 
-  name_prefix = "my-application"
   ecs_cluster_name = data.aws_ecs_cluster.this.name
   ecs_service_name = data.aws_ecs_service.this.name
 
