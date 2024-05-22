@@ -25,7 +25,7 @@ resource "aws_cloudwatch_metric_alarm" "aurora_cpu_surplus_credits_charged" {
   threshold           = var.amount_of_overspent_credits
   period              = var.period
   evaluation_periods  = var.times_failed
-  treat_missing_data = var.treat_missing_data
+  treat_missing_data  = var.treat_missing_data
 
   alarm_actions = var.alarm_sns_topic_arns
   ok_actions    = var.alarm_sns_topic_arns
