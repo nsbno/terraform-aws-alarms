@@ -10,8 +10,8 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "aurora_cpu_surplus_credits_charged" {
-  alarm_name        = "${var.aurora_db_instance_name}-aurora-cpu-credits-empty"
-  alarm_description = "${var.aurora_db_instance_name} has run out of Aurora CPU credits"
+  alarm_name        = "${var.aurora_db_instance_name}-aurora_cpu_surplus_credits_charged"
+  alarm_description = "${var.aurora_db_instance_name} has incurred charges for overspent CPU credits."
 
   metric_name = "CPUCreditSurplusCreditsCharged"
   namespace   = "AWS/RDS"
