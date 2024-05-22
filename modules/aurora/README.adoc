@@ -3,7 +3,7 @@
 :!toc-placement:
 :toc:
 
-Monitor for Aurora CPU credit usage
+Monitor for Aurora CPU Surplus Credits charges.
 
 toc::[]
 

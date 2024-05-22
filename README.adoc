@@ -33,4 +33,4 @@ link:./modules/sqs-dlq/[SQS DLQ]::
 Know when your SQS messages are ending up in a DLQ.
 
 link:./modules/aurora/[Aurora RDS]::
-See if you run out of CPU credits in your Aurora RDS.
+See if you have incurred any costs from Aurora by using too many CPU Credits.

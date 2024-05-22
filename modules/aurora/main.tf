@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "aurora_cpu_credits_empty" {
+resource "aws_cloudwatch_metric_alarm" "aurora_cpu_surplus_credits_charged" {
   alarm_name        = "${var.aurora_db_instance_name}-aurora-cpu-credits-empty"
   alarm_description = "${var.aurora_db_instance_name} has run out of Aurora CPU credits"
 
@@ -22,7 +22,7 @@ resource "aws_cloudwatch_metric_alarm" "aurora_cpu_credits_empty" {
 
   statistic           = "Sum"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  threshold           = var.maximum_possible_cpu_credits * var.percentage_threshold_to_monitor
+  threshold           = 0
   period              = 300
   evaluation_periods  = 3
 
