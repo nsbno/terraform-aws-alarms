@@ -24,7 +24,7 @@ resource "aws_cloudwatch_metric_alarm" "aurora_cpu_surplus_credits_charged" {
   comparison_operator = "GreaterThanOrEqualToThreshold"
   threshold           = 0
   period              = 300
-  evaluation_periods  = 3
+  evaluation_periods  = 1
 
   alarm_actions = var.alarm_sns_topic_arns
   ok_actions    = var.alarm_sns_topic_arns
