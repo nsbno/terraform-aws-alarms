@@ -3,7 +3,7 @@
 :!toc-placement:
 :toc:
 
-Monitor for Aurora CPU Surplus Credits charges.
+Monitor for Aurora CPU Surplus Credit charges.
 
 toc::[]
 
@@ -13,8 +13,8 @@ Place this module in your application repository
 
 [source, hcl]
 ----
-module "aurora_cpu_credits_empty" {
-  source = "github.com/nsbno/terraform-aws-alarms//modules/aurora_cpu_credits_empty?ref=x.y.z"
+module "rds_overspent_instance_credits" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/rds_overspent_instance_credits?ref=x.y.z"
 
   aurora_db_instance_name = your_db_instance_name
   alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
