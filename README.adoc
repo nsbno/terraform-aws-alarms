@@ -32,5 +32,4 @@ See if something is wrong with services behind an ALB.
 link:./modules/sqs-dlq/[SQS DLQ]::
 Know when your SQS messages are ending up in a DLQ.
 
-link:./modules/aurora/[Aurora RDS]::
-See if you have incurred any costs from Aurora by using too many CPU Credits.
+link:./modules/rds_overspent_instance_credits/[RDS Overspent Instance Credits]::
