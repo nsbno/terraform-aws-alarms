@@ -17,10 +17,10 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   dimensions = {
     level = "error"
   }
-  threshold           = var.error_threshold
-  period              = var.period
-  evaluation_periods  = var.times_failed
-  treat_missing_data  = var.treat_missing_data
+  threshold          = var.error_threshold
+  period             = var.period
+  evaluation_periods = var.times_failed
+  treat_missing_data = var.treat_missing_data
   statistic          = "Sum"
   alarm_description  = "${var.ecs_service_name} has logged too many errors"
   alarm_actions      = var.alarm_sns_topic_arns
