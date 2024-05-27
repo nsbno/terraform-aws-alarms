@@ -1,0 +1,22 @@
+= Cloudwatch Error Logs Monitoring
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor for too many errors in the ECS service's cloudwatch logs.
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "cloudwatch_too_many_errors" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/cloudwatch_too_many_errors?ref=x.y.z"
+  ecs_service_name = data.aws_ecs_service.this.name
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
+}
+----
