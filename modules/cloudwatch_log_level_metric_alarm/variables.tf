@@ -16,12 +16,12 @@ variable "log_group_name" {
 variable "log_level_field_name" {
   description = "The field in the log that contains the log level, e.g. level"
   type        = string
-  default = "level"
+  default     = "level"
 }
 variable "log_level_to_monitor" {
   description = "The log level to monitor for errors, e.g. ERROR"
   type        = string
-  default = "ERROR"
+  default     = "ERROR"
 }
 
 variable "alarm_sns_topic_arns" {
