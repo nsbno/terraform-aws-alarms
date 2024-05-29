@@ -17,13 +17,13 @@ variable "alarm_sns_topic_arns" {
 /*
  * == Alarm Configuration
  */
-variable "error_threshold" {
+variable "error_budget" {
   description = "Amount of errors the service can log before an alarm is triggered"
   type        = number
   default     = 5
 }
 
-variable "times_failed" {
+variable "evaluation_periods" {
   description = "Amount of elapsed evaluation periods before an alarm is triggered"
   type        = number
   default     = 1
