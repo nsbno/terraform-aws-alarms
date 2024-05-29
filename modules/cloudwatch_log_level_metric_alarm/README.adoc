@@ -1,0 +1,25 @@
+= Cloudwatch Log Level Logs Monitoring
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor for logs with a specific log level [INFO, WARN, ERROR etc.] in the service's cloudwatch logs.
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository
+
+[source, hcl]
+----
+module "cloudwatch_log_level_metric_alarm" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/cloudwatch_log_level_metric_alarm?ref=x.y.z"
+  application_name = data.aws_ecs_service.this.name
+
+  alarm_name = "error-monitoring-alarm"
+  log_group_name = "my_log_group_name"
+
+  alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
+}
+----

@@ -35,5 +35,5 @@ Know when your SQS messages are ending up in a DLQ.
 link:./modules/rds_overspent_instance_credits/[RDS Overspent Instance Credits]::
 Monitor for RDS instances that have overspent their instance credits and incurred costs.
 
-link:./modules/cloudwatch_too_many_errors/[Cloudwatch Too Many Errors]::
-Monitor for too many errors in the ECS service's cloudwatch logs.
+link:./modules/cloudwatch_log_level_metric_alarm/[Cloudwatch Log Level Metric Alarm]::
+Monitor for too many logs with a specific log level in a service's cloudwatch logs.
