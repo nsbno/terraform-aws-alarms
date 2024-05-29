@@ -3,6 +3,11 @@ variable "ecs_service_name" {
   type        = string
 }
 
+variable "log_group_name" {
+  description = "The name of the log group to monitor"
+  type        = string
+}
+
 variable "alarm_sns_topic_arns" {
   description = "Where to send Alarms and OKs"
   type        = list(string)
