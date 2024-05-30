@@ -10,14 +10,14 @@ terraform {
 }
 
 resource "aws_cloudwatch_metric_alarm" "this" {
-  alarm_name        = "${var.aurora_db_instance_name}-aurora-cpu-surplus-credits-charged"
-  alarm_description = "${var.aurora_db_instance_name} has incurred charges for overspent CPU credits."
+  alarm_name        = "${var.aurora_db_cluster_identifier}-aurora-cpu-surplus-credits-charged"
+  alarm_description = "${var.aurora_db_cluster_identifier} has incurred charges for overspent CPU credits."
 
   metric_name = "CPUCreditSurplusCreditsCharged"
   namespace   = "AWS/RDS"
 
   dimensions = {
-    DBInstanceIdentifier = var.aurora_db_instance_name
+    DBClusterIdentifier = var.aurora_db_cluster_identifier
   }
 
   statistic           = "Sum"
