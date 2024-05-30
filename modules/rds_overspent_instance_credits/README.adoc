@@ -16,7 +16,7 @@ Place this module in your application repository
 module "rds_overspent_instance_credits" {
   source = "github.com/nsbno/terraform-aws-alarms//modules/rds_overspent_instance_credits?ref=x.y.z"
 
-  aurora_db_instance_name = your_db_instance_name
+  aurora_db_cluster_name = your_cluster_name
   alarm_sns_topic_arns = [data.aws_sns_topic.degraded.arn]
 }
 ----
