@@ -33,8 +33,8 @@ variable "alarm_sns_topic_arns" {
 /*
  * == Alarm Configuration
  */
-variable "alarm_tolerance" {
-  description = "Amount of logs with a matching log level the service can log before an alarm is triggered"
+variable "alarm_threshold" {
+  description = "Threshold of matching events before the alarm is triggered"
   type        = number
   default     = 5
 }
@@ -55,5 +55,5 @@ variable "treat_missing_data" {
 variable "period" {
   description = "Period in seconds to check for the applied statistic"
   type        = number
-  default     = 60
+  default     = 30
 }
