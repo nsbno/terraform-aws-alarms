@@ -55,5 +55,5 @@ variable "treat_missing_data" {
 variable "period" {
   description = "Period in seconds to check for the applied statistic"
   type        = number
-  default     = 30
+  default     = 90
 }
