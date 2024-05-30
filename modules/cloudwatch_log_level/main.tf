@@ -28,7 +28,7 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   alarm_name          = var.alarm_name
   comparison_operator = "GreaterThanOrEqualToThreshold"
   namespace           = var.application_name
-  threshold           = var.alarm_tolerance
+  threshold           = var.alarm_threshold
   period              = var.period
   evaluation_periods  = var.evaluation_periods
   treat_missing_data  = var.treat_missing_data

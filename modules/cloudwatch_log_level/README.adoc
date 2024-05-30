@@ -3,7 +3,7 @@
 :!toc-placement:
 :toc:
 
-Monitor for logs with a specific log level [INFO, WARN, ERROR etc.] in the service's cloudwatch logs.
+Monitor for logs with a specific log level [INFO, WARN, ERROR etc.] in a service's cloudwatch logs.
 
 toc::[]
 
@@ -13,8 +13,8 @@ Place this module in your application repository
 
 [source, hcl]
 ----
-module "cloudwatch_log_level_metric_alarm" {
-  source = "github.com/nsbno/terraform-aws-alarms//modules/cloudwatch_log_level_metric_alarm?ref=x.y.z"
+module "cloudwatch_log_level" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/cloudwatch_log_level?ref=x.y.z"
   application_name = data.aws_ecs_service.this.name
 
   alarm_name = "error-monitoring-alarm"
