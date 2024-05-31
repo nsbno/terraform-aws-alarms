@@ -1,5 +1,5 @@
-variable "aurora_db_instance_name" {
-  description = "The name of the Aurora DB Instance"
+variable "aurora_db_cluster_identifier" {
+  description = "The name of the Aurora Cluster"
   type        = string
 }
 
