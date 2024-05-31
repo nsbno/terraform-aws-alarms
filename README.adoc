@@ -33,3 +33,7 @@ link:./modules/sqs-dlq/[SQS DLQ]::
 Know when your SQS messages are ending up in a DLQ.
 
 link:./modules/rds_overspent_instance_credits/[RDS Overspent Instance Credits]::
+Monitor for RDS instances that have overspent their instance credits and incurred costs.
+
+link:./modules/cloudwatch_log_level/[Cloudwatch Log Level]::
+Monitor for too many logs with a specific log level in a service's cloudwatch logs.
