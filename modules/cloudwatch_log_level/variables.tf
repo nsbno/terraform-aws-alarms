@@ -48,12 +48,12 @@ variable "evaluation_periods" {
 variable "treat_missing_data" {
   description = "How this alarm is to handle missing data points"
   type        = string
-  default     = "notBreached"
+  default     = "notBreaching"
 }
 
 
 variable "period" {
   description = "Period in seconds to check for the applied statistic"
   type        = number
-  default     = 90
+  default     = 120
 }
