@@ -9,7 +9,7 @@ toc::[]
 
 == Usage
 
-Place this module in your application repository
+Remember to check out the link:variables.tf[*variables*] and link:outputs.tf[*outputs*] to see all options.
 
 [source, hcl]
 ----
