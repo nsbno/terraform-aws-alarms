@@ -6,6 +6,7 @@ variable "dlq_queue_name" {
 variable "alarm_sns_topic_arns" {
   description = "Where to send Alarms and OKs"
   type        = list(string)
+  default     = null
 }
 
 /*
