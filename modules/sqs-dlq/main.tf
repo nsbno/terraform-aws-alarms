@@ -14,6 +14,7 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   alarm_description = "One or more events could not be processed and was put in the DLQ for ${var.dlq_queue_name}"
 
   alarm_actions = var.alarm_sns_topic_arns
+  ok_actions    = var.alarm_sns_topic_arns
 
   comparison_operator = "GreaterThanOrEqualToThreshold"
   threshold           = var.threshold
