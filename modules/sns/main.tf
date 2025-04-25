@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "sns_no_data" {
 
   statistic           = "Sum"
   comparison_operator = "LessThanThreshold"
-  threshold           = 1
+  threshold           = var.threshold
   period              = var.period
   evaluation_periods  = var.evaluation_periods
   treat_missing_data  = "ignore"
