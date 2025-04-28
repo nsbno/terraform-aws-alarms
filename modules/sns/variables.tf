@@ -2,7 +2,6 @@
 variable "alarm_sns_topic_arns" {
   description = "Where to send Alarms and OKs"
   type        = list(string)
-  default     = null
 }
 
 variable "sns_topic_name" {
