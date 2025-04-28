@@ -37,6 +37,5 @@ Monitor for RDS instances that have overspent their instance credits and incurre
 
 link:./modules/cloudwatch_log_level/[Cloudwatch Log Level]::
 Monitor for too many logs with a specific log level in a service's cloudwatch logs.
-
-link:./modules/sns/[SNS]::
-Monitor SNS topics for no data.
+  link:./modules/sns/[SNS]::
+  Monitor SNS topics for no data.
