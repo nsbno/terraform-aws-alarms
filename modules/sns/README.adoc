@@ -1,0 +1,27 @@
+= SNS Topic Alarms
+:!toc-title:
+:!toc-placement:
+:toc:
+
+Monitor SNS topics for no data.
+
+toc::[]
+
+== Usage
+
+Place this module in your application repository.
+
+[source,hcl]
+----
+module "sns_alarm" {
+  source = "github.com/nsbno/terraform-aws-alarms//modules/sns?ref=x.y.z"
+
+  sns_topic_name         = "example-sns-topic"
+  alarm_sns_topic_arns   = [data.aws_sns_topic.alarm_notifications.arn]
+}
+----
+
+== Variables
+
+- `sns_topic_name` (required): The name of the SNS topic to monitor.
+- `alarm_sns_topic_arns` (required): A list of SNS topic ARNs to notify when alarms are triggered.
