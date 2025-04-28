@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "sns_no_data" {
-  alarm_name        = "topic-${var.sns_topic_name}-no-data-"
+  alarm_name        = "${var.sns_topic_name}-sns-topic-no-data-"
   alarm_description = "Alarm when no messages are published to the SNS topic ${var.sns_topic_name}"
 
   metric_name = "NumberOfMessagesPublished"
