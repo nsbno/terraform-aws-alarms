@@ -14,7 +14,7 @@ resource "aws_cloudwatch_metric_alarm" "sns_no_data" {
   threshold           = var.threshold
   period              = var.period
   evaluation_periods  = var.evaluation_periods
-  treat_missing_data  = "ignore"
+  treat_missing_data  = "breaching"
 
   alarm_actions = var.alarm_sns_topic_arns
   ok_actions    = var.alarm_sns_topic_arns
